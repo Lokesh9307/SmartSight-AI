@@ -2,7 +2,7 @@
 
 SmartSight AI is a comprehensive Next.js application designed to provide a centralized dashboard for monitoring and managing smart building data. It leverages the power of generative AI to offer intelligent insights, including a Retrieval-Augmented Generation (RAG) chat for querying building documentation, real-time anomaly detection, and actionable efficiency recommendations.
 
-![SmartSight AI Dashboard Screenshot](../studio/src/public/images/image.png)
+![SmartSight AI Dashboard Screenshot](https://ucarecdn.com/2a9841c0-f50c-4a3f-abcb-11e20d04414f/Screenshot20250814201935.png)
 
 ## ✨ Key Features
 
