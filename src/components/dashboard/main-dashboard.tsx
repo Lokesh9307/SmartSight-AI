@@ -9,12 +9,16 @@ import { Recommendations } from "./recommendations"
 import { Documents } from "./documents"
 import { Evaluation } from "./evaluation"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+import { SidebarTrigger } from "@/components/ui/sidebar"
 
 export function MainDashboard() {
   return (
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
       <div className="flex items-center justify-between space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight">SmartSight AI Dashboard</h1>
+        <div className="flex items-center gap-2">
+          <SidebarTrigger className="md:hidden" />
+          <h1 className="text-3xl font-bold tracking-tight">SmartSight AI Dashboard</h1>
+        </div>
       </div>
       <Tabs defaultValue="telemetry" className="space-y-4">
         <ScrollArea>
