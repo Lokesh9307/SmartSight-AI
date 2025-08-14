@@ -1,1 +1,6 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+import '@/ai/flows/answer-building-queries.ts';
+import '@/ai/flows/generate-efficiency-recommendations.ts';
+import '@/ai/flows/summarize-anomalous-events.ts';
