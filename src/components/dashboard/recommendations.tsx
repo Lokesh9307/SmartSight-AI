@@ -50,22 +50,22 @@ export function Recommendations() {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <h2 className="text-2xl font-bold">Efficiency Recommendations</h2>
           <p className="text-muted-foreground">AI-driven suggestions to optimize building performance.</p>
         </div>
-        <Button onClick={loadRecommendations} disabled={isLoading}>
+        <Button onClick={loadRecommendations} disabled={isLoading} className="w-full sm:w-auto">
           {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <RefreshCw className="mr-2 h-4 w-4" />}
           Refresh
         </Button>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {isLoading ? renderSkeletons() : (
           <>
             {recommendations?.recommendations.map((rec, index) => {
-              const category = rec.includes("energy") ? "Energy" : rec.includes("maintenance") ? "Maintenance" : "Operational";
+              const category = rec.toLowerCase().includes("energy") ? "Energy" : rec.toLowerCase().includes("maintenance") ? "Maintenance" : "Operational";
               return (
                 <Card key={index}>
                   <CardHeader>

@@ -8,6 +8,7 @@ import { RagChat } from "./rag-chat"
 import { Recommendations } from "./recommendations"
 import { Documents } from "./documents"
 import { Evaluation } from "./evaluation"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
 export function MainDashboard() {
   return (
@@ -16,13 +17,16 @@ export function MainDashboard() {
         <h1 className="text-3xl font-bold tracking-tight">SmartSight AI Dashboard</h1>
       </div>
       <Tabs defaultValue="telemetry" className="space-y-4">
-        <TabsList>
-          <TabsTrigger value="telemetry"><LayoutDashboard className="mr-2 h-4 w-4" />Live Telemetry</TabsTrigger>
-          <TabsTrigger value="rag-chat"><MessageSquare className="mr-2 h-4 w-4" />RAG Chat</TabsTrigger>
-          <TabsTrigger value="recommendations"><Lightbulb className="mr-2 h-4 w-4" />Recommendations</TabsTrigger>
-          <TabsTrigger value="documents"><FileText className="mr-2 h-4 w-4" />Documents</TabsTrigger>
-          <TabsTrigger value="evaluation"><BarChart2 className="mr-2 h-4 w-4" />Evaluation</TabsTrigger>
-        </TabsList>
+        <ScrollArea>
+          <TabsList>
+            <TabsTrigger value="telemetry"><LayoutDashboard className="mr-2 h-4 w-4" />Live Telemetry</TabsTrigger>
+            <TabsTrigger value="rag-chat"><MessageSquare className="mr-2 h-4 w-4" />RAG Chat</TabsTrigger>
+            <TabsTrigger value="recommendations"><Lightbulb className="mr-2 h-4 w-4" />Recommendations</TabsTrigger>
+            <TabsTrigger value="documents"><FileText className="mr-2 h-4 w-4" />Documents</TabsTrigger>
+            <TabsTrigger value="evaluation"><BarChart2 className="mr-2 h-4 w-4" />Evaluation</TabsTrigger>
+          </TabsList>
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
         <TabsContent value="telemetry" className="space-y-4">
           <LiveTelemetry />
         </TabsContent>

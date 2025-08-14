@@ -47,7 +47,7 @@ export function RagChat() {
   }, [messages]);
 
   return (
-    <Card className="h-[75vh] flex flex-col">
+    <Card className="h-[80vh] md:h-[75vh] flex flex-col">
       <CardHeader>
         <CardTitle>RAG Chat</CardTitle>
         <CardDescription>

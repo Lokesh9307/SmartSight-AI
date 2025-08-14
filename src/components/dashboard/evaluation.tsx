@@ -34,7 +34,7 @@ const chartConfig = {
 export function Evaluation() {
   return (
     <div className="space-y-6">
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         <StatCard title="Retrieval Accuracy" value={`${(mockEvaluationMetrics.retrievalAccuracy * 100).toFixed(0)}%`} icon={BotMessageSquare} />
         <StatCard title="Query Latency (p95)" value={`${mockEvaluationMetrics.queryLatency}ms`} icon={Gauge} />
         <StatCard title="Ingestion Lag" value={`${mockEvaluationMetrics.ingestionLag}s`} icon={Gauge} />
